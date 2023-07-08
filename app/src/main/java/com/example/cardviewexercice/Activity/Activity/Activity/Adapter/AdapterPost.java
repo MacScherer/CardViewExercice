@@ -1,5 +1,6 @@
 package com.example.cardviewexercice.Activity.Activity.Activity.Adapter;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cardviewexercice.R;
+
 import java.util.List;
 
 public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyViewHolder> {
@@ -15,7 +18,9 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyViewHolder> 
     @NonNull
     @Override
     public AdapterPost.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+         View listItem = LayoutInflater.from(parent.getContext())
+                 .inflate(R.layout.adapter_list, parent, false);
+         return new MyViewHolder(listItem);
     }
 
     @Override
