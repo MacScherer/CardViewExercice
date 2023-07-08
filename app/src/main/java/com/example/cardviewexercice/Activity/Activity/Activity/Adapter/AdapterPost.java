@@ -39,6 +39,9 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyViewHolder> 
         ImageView imageViewPhoto;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            textViewUserName = itemView.findViewById(R.id.textViewUserName);
+            textViewPostTitle = itemView.findViewById(R.id.recyclerViewPost);
+            imageViewPhoto = itemView.findViewById(R.id.imageViewPost);
         }
     }
 }
