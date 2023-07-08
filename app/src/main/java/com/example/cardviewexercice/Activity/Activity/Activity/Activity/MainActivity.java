@@ -1,14 +1,12 @@
 package com.example.cardviewexercice.Activity.Activity.Activity.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.cardviewexercice.Activity.Activity.Activity.Adapter.AdapterPost;
+import com.example.cardviewexercice.Activity.Activity.Activity.Adapter.PostAdapter;
 import com.example.cardviewexercice.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //CREATE ADAPTER
-        AdapterPost adapterPost = new AdapterPost();
+        PostAdapter adapter = new PostAdapter();
+        recyclerViewPost.setAdapter(adapter);
 
     }
 }
